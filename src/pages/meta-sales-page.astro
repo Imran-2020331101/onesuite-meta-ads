@@ -1,0 +1,38 @@
+---
+// Paid-traffic landing page for Facebook/Meta ads. Uses LandingLayout (slim
+// header + footer, no mega menu) instead of the site Layout. English-only
+// (deliberately not in localizedPaths) and noindex'd, since the copy overlaps
+// /time-tracking and /pricing — flip `noindex` to false to let it be indexed.
+import LandingLayout from "../layouts/LandingLayout.astro";
+import FacebookAdsHero from "../components/facebook-ads/FacebookAdsHero.astro";
+import WorkflowChainSection from "../components/facebook-ads/WorkflowChainSection.astro";
+import FeatureRows from "../components/facebook-ads/FeatureRows.astro";
+import StackConsolidationSection from "../components/facebook-ads/StackConsolidationSection.astro";
+import EverythingIncludedSection from "../components/facebook-ads/EverythingIncludedSection.astro";
+import SimplePricingSection from "../components/facebook-ads/SimplePricingSection.astro";
+import GettingStartedSteps from "../components/facebook-ads/GettingStartedSteps.astro";
+import FacebookAdsFAQ from "../components/facebook-ads/FacebookAdsFAQ.astro";
+import TestimonialsGrid from "../components/homepage/TestimonialsGrid.astro";
+import ProductOverviewStrip from "../components/homepage/ProductOverviewStrip.astro";
+---
+
+<LandingLayout
+  title="OneSuite — Track Time. Manage Projects. Get Paid."
+  description="Track every billable hour, manage projects, invoice clients, and keep your entire client workflow in one place — without stitching together multiple tools."
+  noindex={true}
+>
+  <FacebookAdsHero />
+  <WorkflowChainSection />
+  <FeatureRows />
+  <StackConsolidationSection />
+  <EverythingIncludedSection />
+  <SimplePricingSection />
+  <TestimonialsGrid />
+  <GettingStartedSteps />
+  <FacebookAdsFAQ />
+  <ProductOverviewStrip
+    title="Turn your team's time into profitable work."
+    description="Track time. Manage projects. Serve clients. Send invoices. Get paid — all from one workspace."
+    buttonOneText="Start your free trial"
+  />
+</LandingLayout>

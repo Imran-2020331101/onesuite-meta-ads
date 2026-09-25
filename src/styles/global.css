@@ -1,0 +1,122 @@
+/* ==========================================================
+   ONESUITE GLOBAL STYLES
+   ========================================================== */
+
+:root {
+  /* Brand */
+  --os-blue: #3F7FF5;
+  --os-blue-hover: #326BE0;
+  --os-blue-dark: #2867D8;
+  --os-blue-light: #EEF5FF;
+  --os-blue-bg: #EAF2FF;
+  --os-blue-border: #D7E5FC;
+
+  /* Greens */
+  --os-green: #12B76A;
+  --os-green-dark: #039855;
+  --os-green-bg: #ECFDF3;
+
+  /* Purple */
+  --os-purple: #7F56D9;
+  --os-purple-bg: #F4F3FF;
+
+  /* Red */
+  --os-red: #F04438;
+  --os-red-bg: #FEF3F2;
+
+  /* Orange */
+  --os-orange: #F79009;
+  --os-orange-bg: #FFFAEB;
+
+  /* Pink */
+  --os-pink: #EE46BC;
+  --os-pink-bg: #FDF2FA;
+
+  /* Neutrals */
+  --os-dark: #101828;
+  --os-text: #344054;
+  --os-body: #475467;
+  --os-secondary: #667085;
+  --os-muted: #98A2B3;
+  --os-border: #E4E7EC;
+  --os-border-light: #E8ECF2;
+  --os-border-lighter: #F0F2F5;
+  --os-surface: #F8FAFC;
+  --os-surface-alt: #FAFBFC;
+  --os-bg-blue: #f8faff;
+
+  /* Radius */
+  --os-radius-sm: 6px;
+  --os-radius: 8px;
+  --os-radius-md: 10px;
+  --os-radius-lg: 12px;
+  --os-radius-xl: 16px;
+
+  /* Shadows */
+  --os-shadow-sm: 0 2px 6px rgba(16,24,40,.04);
+  --os-shadow: 0 5px 18px rgba(16,24,40,.06);
+  --os-shadow-md: 0 8px 24px rgba(16,24,40,.08);
+  --os-shadow-lg: 0 15px 35px rgba(16,24,40,.13);
+  --os-shadow-xl: 0 35px 80px rgba(16,24,40,.16);
+  --os-shadow-blue: 0 8px 24px rgba(63,127,245,.25);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--os-body);
+  background: #ffffff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  color: var(--os-dark);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Container */
+.onesuite-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .onesuite-container {
+    width: calc(100% - 32px);
+  }
+}

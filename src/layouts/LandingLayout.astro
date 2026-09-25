@@ -1,0 +1,359 @@
+---
+// Slim landing-page layout — sticky header with in-page nav + minimal footer.
+// No mega-menu, no site-wide chrome. Used by paid-traffic pages.
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+
+const { title, description, noindex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;650;700;750;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <section class="os-announcement">
+      <div class="onesuite-container">
+        <div class="os-announcement-inner">
+          <div class="os-announcement-text">
+            <span class="os-announcement-badge">LIMITED LAUNCH OFFER</span>
+            <span>
+              Get your <strong>Branded Client Portal</strong> for
+              <strong>$25</strong>
+              <del>$34</del>
+              — save $9.
+            </span>
+          </div>
+          <a href="#branding-offer" class="os-announcement-link">
+            Claim offer →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Header -->
+    <section class="os-header">
+      <div class="onesuite-container">
+        <header class="os-nav">
+          <a href="#" class="os-logo" aria-label="OneSuite">
+            <img
+              src="https://onesuite.io/_astro/onesuite-logo.Bafzf4sN_Z1qY5Fz.webp"
+              alt="OneSuite"
+              class="os-logo-img"
+              width="145"
+              height="42"
+            />
+          </a>
+
+          <nav class="os-nav-links" aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+
+          <a href="https://app.onesuite.io" class="os-nav-cta">
+            Start Free Trial
+          </a>
+        </header>
+      </div>
+    </section>
+
+    <!-- Page content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="os-landing-footer">
+      <div class="onesuite-container">
+        <div class="os-footer-inner">
+          <div class="os-footer-brand">
+            <img
+              src="https://onesuite.io/_astro/onesuite-logo.Bafzf4sN_Z1qY5Fz.webp"
+              alt="OneSuite"
+              class="os-footer-logo"
+              width="120"
+              height="36"
+            />
+            <p>
+              Manage your clients, projects, contracts, time, invoices and communication from one simple workspace.
+            </p>
+          </div>
+          <div class="os-footer-links">
+            <a href="https://onesuite.io/terms">Terms</a>
+            <a href="https://onesuite.io/privacy">Privacy</a>
+            <a href="mailto:support@onesuite.io">Contact</a>
+          </div>
+          <div class="os-footer-copy">
+            &copy; {new Date().getFullYear()} OneSuite. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+</style>
+
+<style>
+  /* =========================================
+     ANNOUNCEMENT BAR
+  ========================================= */
+  .os-announcement {
+    background: #F1F6FF;
+    border-bottom: 1px solid #DDE8FB;
+  }
+
+  .os-announcement-inner {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    font-size: 13px;
+    color: #344054;
+  }
+
+  .os-announcement-badge {
+    display: inline-flex;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: #E1ECFF;
+    color: var(--os-blue);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .06em;
+  }
+
+  .os-announcement-text {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .os-announcement-text strong {
+    color: var(--os-dark);
+  }
+
+  .os-announcement-text del {
+    color: #98A2B3;
+  }
+
+  .os-announcement-link {
+    color: var(--os-blue);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 767px) {
+    .os-announcement-inner {
+      padding: 9px 0;
+      flex-direction: column;
+      gap: 3px;
+      line-height: 1.35;
+    }
+
+    .os-announcement-text {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  /* =========================================
+     HEADER
+  ========================================= */
+  .os-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #F0F2F5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .os-nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .os-logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+    line-height: 0;
+  }
+
+  .os-logo-img {
+    display: block;
+    width: 145px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+  }
+
+  .os-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .os-nav-links a {
+    position: relative;
+    color: #475467;
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 1;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .os-nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: #3F7FF5;
+    transition: width 0.2s ease;
+  }
+
+  .os-nav-links a:hover {
+    color: #3F7FF5;
+  }
+
+  .os-nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .os-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 18px;
+    color: #ffffff !important;
+    background: #3F7FF5;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(63, 127, 245, 0.18);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .os-nav-cta:hover {
+    color: #ffffff !important;
+    background: #326BE0;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(63, 127, 245, 0.25);
+  }
+
+  @media (max-width: 900px) {
+    .os-nav-links { gap: 20px; }
+    .os-nav-links a { font-size: 13px; }
+    .os-logo-img { width: 135px; }
+  }
+
+  @media (max-width: 767px) {
+    .os-nav { height: 68px; gap: 12px; }
+    .os-nav-links { display: none; }
+    .os-logo-img { width: 125px; max-height: 36px; }
+    .os-nav-cta {
+      min-height: 39px;
+      padding: 0 14px;
+      border-radius: 7px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .os-logo-img { width: 112px; }
+    .os-nav-cta {
+      min-height: 37px;
+      padding: 0 11px;
+      font-size: 11px;
+    }
+  }
+
+  /* =========================================
+     FOOTER
+  ========================================= */
+  .os-landing-footer {
+    padding: 60px 0 40px;
+    background: #FAFBFC;
+    border-top: 1px solid var(--os-border);
+  }
+
+  .os-footer-inner {
+    text-align: center;
+  }
+
+  .os-footer-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 16px;
+  }
+
+  .os-footer-brand p {
+    max-width: 420px;
+    margin: 0 auto;
+    color: var(--os-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .os-footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .os-footer-links a {
+    color: var(--os-secondary);
+    font-size: 13px;
+    font-weight: 550;
+    transition: color 0.2s;
+  }
+
+  .os-footer-links a:hover {
+    color: var(--os-blue);
+  }
+
+  .os-footer-copy {
+    margin-top: 24px;
+    color: var(--os-muted);
+    font-size: 12px;
+  }
+</style>

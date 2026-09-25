@@ -1,0 +1,447 @@
+---
+// FacebookAdsHero — Full-width hero with left content + right product visual
+// Includes eyebrow, headline, subtext, audience pills, benefits, CTA, trust badges, and limited offer card
+---
+
+<section class="os-hero-v2">
+  <div class="os-hero-v2-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="os-hero-v2-content">
+
+      <!-- Eyebrow -->
+      <div class="os-hero-v2-eyebrow">
+        <span class="os-pulse-dot"></span>
+        BUILT FOR CLIENT-BASED BUSINESSES
+      </div>
+
+      <!-- Main headline -->
+      <h1>
+        No More Messy Systems.
+        <span>Stay Organised. Look Professional.</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="os-hero-v2-subtext">
+        Manage your clients, projects, contracts, time, invoices and
+        communication from one simple workspace — so you can spend less
+        time managing your business and more time serving your clients.
+      </p>
+
+      <!-- Audience pills -->
+      <div class="os-hero-v2-audiences">
+        <span>Social Media Managers</span>
+        <span>Freelancers</span>
+        <span>Virtual Assistants</span>
+        <span>Wedding &amp; Event Pros</span>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="os-hero-social-proof">
+        <div class="os-stars">★★★★★</div>
+        <div class="os-review-text">
+          <strong>5/5</strong>
+          <span>customer rating</span>
+        </div>
+        <div class="os-proof-divider"></div>
+        <div class="os-client-proof">
+          <strong>200+</strong>
+          <span>clients managed</span>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="os-hero-v2-benefits">
+        <div class="os-benefit">
+          <span class="os-benefit-icon">✓</span>
+          <span>Keep all your clients organised</span>
+        </div>
+        <div class="os-benefit">
+          <span class="os-benefit-icon">✓</span>
+          <span>Manage projects, contracts &amp; invoices</span>
+        </div>
+        <div class="os-benefit">
+          <span class="os-benefit-icon">✓</span>
+          <span>Give clients a more professional experience</span>
+        </div>
+      </div>
+
+      <!-- CTA AREA -->
+      <div class="os-hero-v2-actions">
+        <a href="https://app.onesuite.io" class="os-hero-v2-primary">
+          Start Your Free Trial
+          <span>→</span>
+        </a>
+        <div class="os-hero-v2-price">
+          <strong>$9</strong>
+          <div>
+            <span>/ person / month</span>
+            <small>No credit card required</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust -->
+      <div class="os-hero-v2-trust">
+        <span><b>✓</b> Everything included</span>
+        <span><b>✓</b> Unlimited clients</span>
+        <span><b>✓</b> Cancel anytime</span>
+      </div>
+
+      <!-- LIMITED OFFER -->
+      <div class="os-limited-offer" id="branding-offer">
+        <div class="os-offer-top">
+          <div class="os-offer-badge">LIMITED OFFER</div>
+          <div class="os-offer-count">ONLY <strong>10</strong> SPOTS</div>
+        </div>
+        <div class="os-offer-content">
+          <div class="os-offer-icon">✦</div>
+          <div class="os-offer-text">
+            <h3>Get Your Branded Client Portal</h3>
+            <p>
+              Available for the <strong>first 10 registered clients only.</strong>
+              Get your branded portal for
+              <strong>$25</strong>
+              <del>$34</del>
+              and save $9.
+            </p>
+          </div>
+        </div>
+        <a href="https://app.onesuite.io" class="os-offer-button">
+          Claim My $25 Branded Portal
+          <span>→</span>
+        </a>
+        <div class="os-offer-note">
+          First 10 registered clients only · While spots last
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT PRODUCT VISUAL -->
+    <div class="os-hero-v2-visual">
+      <div class="os-hero-v2-glow"></div>
+
+      <!-- Main dashboard — image-based -->
+      <div class="os-product-window">
+        <!-- Browser bar -->
+        <div class="os-window-bar">
+          <div class="os-window-dots"><i></i><i></i><i></i></div>
+          <div class="os-window-address">app.onesuite.com</div>
+          <div class="os-window-profile">MJ</div>
+        </div>
+
+        <!-- Dashboard screenshot -->
+        <img
+          src="/images/hero/profitibility.png"
+          alt="OneSuite Report and Profitibility showing a dashboard with a graph, revenue, expenses, and profit"
+          class="os-dashboard-img"
+          width="650"
+          height="445"
+          loading="eager"
+        />
+      </div>
+
+      <!-- Floating client card -->
+      <img
+        src="/images/hero/float-timer.png"
+        alt="New client notification — Sarah Williams added"
+        class="os-float-img os-float-client"
+        width="200"
+        height="52"
+        loading="eager"
+      />
+
+      <!-- Floating payment card -->
+      <img
+        src="/images/hero/float-invoicing.png"
+        alt="Payment received — $850.00"
+        class="os-float-img os-float-notification"
+        width="200"
+        height="52"
+        loading="eager"
+      />
+
+      <!-- Floating contract card -->
+      <img
+        src="/images/hero/float-contract.png"
+        alt="Contract signed — Just now"
+        class="os-float-img os-float-payment"
+        width="175"
+        height="52"
+        loading="eager"
+      />
+
+      <!-- Bottom notification -->
+      <img
+        src="/images/hero/notification.png"
+        alt="Client portal updated — Acme Studio can now view their project"
+        class="os-float-img os-float-contract"
+        width="260"
+        height="48"
+        loading="eager"
+      />
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ==========================================================
+     HERO V2
+     ========================================================== */
+  .os-hero-v2 {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 0 90px;
+    background:
+      radial-gradient(circle at 82% 42%, rgba(63,127,245,.12), transparent 35%),
+      #ffffff;
+  }
+
+  .os-hero-v2-container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .92fr 1.08fr;
+    align-items: center;
+    gap: 55px;
+  }
+
+  /* LEFT */
+  .os-hero-v2-content { position: relative; z-index: 10; }
+
+  .os-hero-v2-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #3F7FF5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .09em;
+  }
+
+  .os-pulse-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #3F7FF5;
+    box-shadow: 0 0 0 5px rgba(63,127,245,.11);
+    animation: osPulse 2s infinite;
+  }
+
+  @keyframes osPulse {
+    0%,100% { box-shadow: 0 0 0 4px rgba(63,127,245,.10); }
+    50%     { box-shadow: 0 0 0 8px rgba(63,127,245,.04); }
+  }
+
+  .os-hero-v2-content h1 {
+    max-width: 630px;
+    margin: 18px 0 20px;
+    color: #101828;
+    font-size: clamp(45px, 5vw, 66px);
+    line-height: 1.02;
+    letter-spacing: -.055em;
+    font-weight: 800;
+  }
+
+  .os-hero-v2-content h1 span { display: block; color: #3F7FF5; }
+
+  .os-hero-v2-subtext {
+    max-width: 570px;
+    margin: 0;
+    color: #475467;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  /* Audiences */
+  .os-hero-v2-audiences { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 22px; }
+  .os-hero-v2-audiences span {
+    padding: 6px 10px;
+    border: 1px solid #E4E7EC;
+    border-radius: 7px;
+    background: #FAFBFC;
+    color: #475467;
+    font-size: 10px;
+    font-weight: 650;
+  }
+
+  /* Social proof */
+  .os-hero-social-proof {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 19px;
+    padding: 9px 13px;
+    border: 1px solid #E8EDF5;
+    border-radius: 9px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(16,24,40,.045);
+  }
+  .os-stars { color: #F5A623; font-size: 14px; letter-spacing: 1px; line-height: 1; }
+  .os-review-text, .os-client-proof { display: flex; align-items: baseline; gap: 4px; }
+  .os-review-text strong, .os-client-proof strong { color: #101828; font-size: 11px; font-weight: 800; }
+  .os-review-text span, .os-client-proof span { color: #667085; font-size: 9px; }
+  .os-proof-divider { width: 1px; height: 22px; background: #E4E7EC; }
+
+  /* Benefits */
+  .os-hero-v2-benefits { display: flex; flex-direction: column; gap: 7px; margin-top: 21px; }
+  .os-benefit { display: flex; align-items: center; gap: 8px; color: #344054; font-size: 12px; font-weight: 550; }
+  .os-benefit-icon {
+    width: 18px; height: 18px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    color: #12B76A; background: #ECFDF3;
+    font-size: 9px; font-weight: 900;
+  }
+
+  /* CTA */
+  .os-hero-v2-actions { display: flex; align-items: center; gap: 17px; margin-top: 28px; }
+  .os-hero-v2-primary {
+    min-height: 53px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 15px;
+    padding: 0 23px;
+    border-radius: 9px;
+    color: #ffffff; background: #3F7FF5;
+    box-shadow: 0 8px 24px rgba(63,127,245,.25);
+    font-size: 14px; font-weight: 750;
+    text-decoration: none;
+    transition: all .2s ease;
+  }
+  .os-hero-v2-primary:hover { color: #ffffff; background: #2867D8; transform: translateY(-2px); }
+  .os-hero-v2-primary span { font-size: 19px; }
+
+  .os-hero-v2-price { display: flex; align-items: center; gap: 5px; }
+  .os-hero-v2-price strong { color: #101828; font-size: 23px; }
+  .os-hero-v2-price span { display: block; color: #667085; font-size: 11px; }
+  .os-hero-v2-price small { display: block; color: #98A2B3; font-size: 9px; }
+
+  /* Trust */
+  .os-hero-v2-trust { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 13px; color: #667085; font-size: 10px; }
+  .os-hero-v2-trust b { color: #12B76A; margin-right: 3px; }
+
+  /* LIMITED OFFER */
+  .os-limited-offer {
+    max-width: 510px; margin-top: 28px; padding: 15px;
+    border: 1px solid #D7E5FC; border-radius: 12px;
+    background: linear-gradient(135deg, #F7FAFF, #FFFFFF);
+    box-shadow: 0 7px 20px rgba(63,127,245,.07);
+  }
+  .os-offer-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
+  .os-offer-badge { padding: 4px 8px; border-radius: 5px; color: #ffffff; background: #3F7FF5; font-size: 8px; font-weight: 800; letter-spacing: .07em; }
+  .os-offer-count { color: #667085; font-size: 9px; font-weight: 700; }
+  .os-offer-count strong { color: #3F7FF5; }
+  .os-offer-content { display: flex; align-items: center; gap: 11px; }
+  .os-offer-icon {
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    border-radius: 9px; color: white;
+    background: linear-gradient(135deg, #65A7FF, #315FE7);
+    font-size: 16px;
+  }
+  .os-offer-text h3 { margin: 0; color: #101828; font-size: 13px; font-weight: 750; }
+  .os-offer-text p { margin: 3px 0 0; color: #667085; font-size: 10px; line-height: 1.5; }
+  .os-offer-text p strong { color: #101828; }
+  .os-offer-text p del { color: #98A2B3; margin-left: 2px; }
+  .os-offer-button {
+    min-height: 40px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-top: 12px; border-radius: 7px;
+    color: #3F7FF5; background: #EAF2FF;
+    font-size: 11px; font-weight: 750;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+  .os-offer-button:hover { color: #ffffff; background: #3F7FF5; }
+  .os-offer-note { margin-top: 7px; color: #98A2B3; text-align: center; font-size: 8px; }
+
+  /* ==========================================================
+     RIGHT VISUAL
+     ========================================================== */
+  .os-hero-v2-visual { position: relative; min-height: 560px; display: flex; align-items: center; justify-content: center; }
+  .os-hero-v2-glow {
+    position: absolute; width: 500px; height: 500px; border-radius: 50%;
+    background: rgba(63,127,245,.09); filter: blur(35px);
+    animation: osHeroGlow 5s ease-in-out infinite;
+  }
+  @keyframes osHeroGlow {
+    0%,100% { transform: scale(.95); opacity: .65; }
+    50% { transform: scale(1.08); opacity: 1; }
+  }
+
+  /* Product Window */
+  .os-product-window {
+    position: relative; z-index: 3; width: 100%; max-width: 650px;
+    overflow: hidden;
+    border: 1px solid #DCE2EA; border-radius: 15px; background: white;
+    box-shadow: 0 35px 80px rgba(16,24,40,.16), 0 7px 25px rgba(16,24,40,.06);
+    transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
+    animation: osProductFloat 6s ease-in-out infinite;
+  }
+  @keyframes osProductFloat {
+    0%,100% { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(0); }
+    50% { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(-9px); }
+  }
+
+  .os-window-bar { height: 42px; display: flex; align-items: center; gap: 13px; padding: 0 12px; border-bottom: 1px solid #E8ECF2; background: #F8FAFC; }
+  .os-window-dots { display: flex; gap: 4px; }
+  .os-window-dots i { width: 7px; height: 7px; border-radius: 50%; background: #D0D5DD; font-style: normal; }
+  .os-window-address { flex: 1; padding: 5px 10px; border: 1px solid #E4E7EC; border-radius: 5px; background: white; color: #98A2B3; text-align: center; font-size: 8px; }
+  .os-window-profile { width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: white; background: #3F7FF5; font-size: 8px; font-weight: 800; }
+
+  /* Dashboard screenshot */
+  .os-dashboard-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Floating image cards */
+  .os-float-img {
+    position: absolute; z-index: 6;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(16,24,40,.13);
+  }
+
+  .os-float-client { left: -17px; top: 68px; width: 200px; animation: osFloatClient 5s ease-in-out infinite; }
+  .os-float-payment { right: -20px; bottom: 110px; width: 200px; animation: osFloatPayment 5.5s ease-in-out infinite; }
+  .os-float-contract { right: -18px; top: 150px; width: 175px; animation: osFloatContract 4.5s ease-in-out infinite; }
+  .os-float-notification { left: 35px; bottom: 27px; z-index: 7; width: 260px; animation: osNotificationFloat 4s ease-in-out infinite; }
+  @keyframes osNotificationFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+  /* RESPONSIVE */
+  @media (max-width: 1000px) {
+    .os-hero-v2-container { grid-template-columns: 1fr; gap: 55px; }
+    .os-hero-v2-content { max-width: 720px; }
+    .os-hero-v2-visual { min-height: 530px; }
+  }
+
+  @media (max-width: 700px) {
+    .os-hero-v2 { padding: 55px 0 65px; }
+    .os-hero-v2-container { width: calc(100% - 28px); gap: 45px; }
+    .os-hero-v2-content h1 { font-size: 43px; }
+    .os-hero-v2-subtext { font-size: 16px; }
+    .os-hero-v2-actions { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .os-hero-v2-primary { width: 100%; }
+    .os-hero-v2-trust { gap: 8px 14px; }
+    .os-limited-offer { margin-top: 25px; }
+    .os-offer-top { align-items: flex-start; flex-direction: column; gap: 6px; }
+    .os-hero-v2-visual { min-height: 380px; }
+    .os-product-window { transform: none; animation: osMobileProductFloat 6s ease-in-out infinite; }
+    .os-float-img { box-shadow: 0 10px 25px rgba(16,24,40,.10); }
+    .os-float-client { left: -4px; top: 30px; width: 160px; }
+    .os-float-payment { right: -4px; bottom: 50px; width: 160px; }
+    .os-float-contract { display: none; }
+    .os-float-notification { left: 10px; bottom: 3px; width: 220px; }
+    .os-hero-social-proof { width: 100%; justify-content: center; gap: 9px; padding: 9px 8px; }
+    .os-stars { font-size: 12px; }
+    .os-review-text span, .os-client-proof span { font-size: 8px; }
+  }
+
+  @keyframes osMobileProductFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+</style>
