@@ -1,6 +1,7 @@
 ---
 // GettingStartedSteps.astro
 ---
+
 <section class="os-getting-started">
   <div class="container">
     <div class="header">
@@ -8,29 +9,36 @@
       <h2>Three Simple Steps <span>to Get Organised.</span></h2>
       <p class="subtitle">Getting started with OneSuite is quick and easy.</p>
     </div>
-    
+
     <div class="steps-row">
       <div class="step">
         <div class="step-num">1</div>
         <h3>Sign Up</h3>
-        <p>Create your free account in under a minute. No credit card needed.</p>
+        <p>
+          Create your free account in under a minute. No credit card needed.
+        </p>
       </div>
-      
+
       <div class="step">
         <div class="step-num">2</div>
         <h3>Set Up Your Workspace</h3>
         <p>Add your clients, create projects, and customise your workflow.</p>
       </div>
-      
+
       <div class="step">
         <div class="step-num">3</div>
         <h3>Start Managing</h3>
-        <p>Track time, send invoices, and deliver a professional client experience.</p>
+        <p>
+          Track time, send invoices, and deliver a professional client
+          experience.
+        </p>
       </div>
     </div>
-    
+
     <div class="bottom-cta">
-      <a href="https://app.onesuite.io" class="btn">Start Your Free Trial &rarr;</a>
+      <a href="https://app.onesuite.io" class="btn"
+        >Start Your Free Trial &rarr;</a
+      >
       <p class="small-text">No credit card required</p>
     </div>
   </div>
@@ -40,9 +48,12 @@
   .os-getting-started {
     padding: 80px 20px;
     background-color: #ffffff;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
   }
-  
+
   .container {
     max-width: 900px;
     margin: 0 auto;
@@ -55,16 +66,19 @@
   }
 
   .eyebrow {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #f8faff;
-    color: #3F7FF5;
-    font-size: 12px;
+    display: inline-flex;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: #f1f5ff;
+    border: 1px solid var(--os-orange);
+    color: var(--os-orange);
+    /* border: 1px solid #d9e5ff;
+    color: #3f7ff5; */
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 1px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-    border: 1px solid #d6e2fa;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
   }
 
   .header h2 {
@@ -76,7 +90,7 @@
   }
 
   .header h2 span {
-    color: #3F7FF5;
+    color: #3f7ff5;
   }
 
   .subtitle {
@@ -139,7 +153,7 @@
   .btn {
     display: inline-block;
     padding: 14px 28px;
-    background-color: #3F7FF5;
+    background-color: #3f7ff5;
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
@@ -163,7 +177,7 @@
       flex-direction: column;
       gap: 20px;
     }
-    
+
     .header h2 {
       font-size: 28px;
     }

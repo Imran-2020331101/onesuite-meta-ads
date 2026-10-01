@@ -25,7 +25,8 @@
   --os-red-bg: #FEF3F2;
 
   /* Orange */
-  --os-orange: #F79009;
+  --os-orange: #ff5e00;
+  --os-orange-light: #ff7b00af;
   --os-orange-bg: #FFFAEB;
 
   /* Pink */
@@ -53,16 +54,18 @@
   --os-radius-xl: 16px;
 
   /* Shadows */
-  --os-shadow-sm: 0 2px 6px rgba(16,24,40,.04);
-  --os-shadow: 0 5px 18px rgba(16,24,40,.06);
-  --os-shadow-md: 0 8px 24px rgba(16,24,40,.08);
-  --os-shadow-lg: 0 15px 35px rgba(16,24,40,.13);
-  --os-shadow-xl: 0 35px 80px rgba(16,24,40,.16);
-  --os-shadow-blue: 0 8px 24px rgba(63,127,245,.25);
+  --os-shadow-sm: 0 2px 6px rgba(16, 24, 40, .04);
+  --os-shadow: 0 5px 18px rgba(16, 24, 40, .06);
+  --os-shadow-md: 0 8px 24px rgba(16, 24, 40, .08);
+  --os-shadow-lg: 0 15px 35px rgba(16, 24, 40, .13);
+  --os-shadow-xl: 0 35px 80px rgba(16, 24, 40, .16);
+  --os-shadow-blue: 0 8px 24px rgba(63, 127, 245, .25);
 }
 
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -83,7 +86,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -100,12 +107,18 @@ button {
   background: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   color: var(--os-dark);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 

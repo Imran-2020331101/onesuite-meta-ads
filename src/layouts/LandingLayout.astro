@@ -36,8 +36,8 @@ const { title, description, noindex = false } = Astro.props;
             <span>
               Get your <strong>Branded Client Portal</strong> for
               <strong>$25</strong>
-              <del>$34</del>
-              — save $9.
+              <del>$38</del>
+              — save $13.
             </span>
           </div>
           <a href="#branding-offer" class="os-announcement-link">
@@ -93,7 +93,8 @@ const { title, description, noindex = false } = Astro.props;
               height="36"
             />
             <p>
-              Manage your clients, projects, contracts, time, invoices and communication from one simple workspace.
+              Manage your clients, projects, contracts, time, invoices and
+              communication from one simple workspace.
             </p>
           </div>
           <div class="os-footer-links">
@@ -119,8 +120,8 @@ const { title, description, noindex = false } = Astro.props;
      ANNOUNCEMENT BAR
   ========================================= */
   .os-announcement {
-    background: #F1F6FF;
-    border-bottom: 1px solid #DDE8FB;
+    background: var(--os-dark);
+    border-bottom: 1px solid #1d2939;
   }
 
   .os-announcement-inner {
@@ -130,19 +131,22 @@ const { title, description, noindex = false } = Astro.props;
     justify-content: center;
     gap: 14px;
     text-align: center;
-    font-size: 13px;
-    color: #344054;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffffff;
   }
 
   .os-announcement-badge {
     display: inline-flex;
     padding: 4px 8px;
     border-radius: 5px;
-    background: #E1ECFF;
-    color: var(--os-blue);
+    background: var(--os-orange);
+    color: var(--os-blue-light);
     font-size: 10px;
     font-weight: 800;
-    letter-spacing: .06em;
+    letter-spacing: 0.06em;
   }
 
   .os-announcement-text {
@@ -152,17 +156,22 @@ const { title, description, noindex = false } = Astro.props;
   }
 
   .os-announcement-text strong {
-    color: var(--os-dark);
+    color: #ffffff;
   }
 
   .os-announcement-text del {
-    color: #98A2B3;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   .os-announcement-link {
-    color: var(--os-blue);
+    color: var(--os-orange);
     font-weight: 700;
     white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+
+  .os-announcement-link:hover {
+    color: #ffffff;
   }
 
   @media (max-width: 767px) {
@@ -185,7 +194,7 @@ const { title, description, noindex = false } = Astro.props;
   .os-header {
     width: 100%;
     background: #ffffff;
-    border-bottom: 1px solid #F0F2F5;
+    border-bottom: 1px solid #f0f2f5;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -231,7 +240,9 @@ const { title, description, noindex = false } = Astro.props;
     font-weight: 550;
     line-height: 1;
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .os-nav-links a::after {
@@ -242,12 +253,12 @@ const { title, description, noindex = false } = Astro.props;
     width: 0;
     height: 2px;
     border-radius: 10px;
-    background: #3F7FF5;
+    background: #3f7ff5;
     transition: width 0.2s ease;
   }
 
   .os-nav-links a:hover {
-    color: #3F7FF5;
+    color: #3f7ff5;
   }
 
   .os-nav-links a:hover::after {
@@ -261,7 +272,7 @@ const { title, description, noindex = false } = Astro.props;
     min-height: 42px;
     padding: 0 18px;
     color: #ffffff !important;
-    background: #3F7FF5;
+    background: #3f7ff5;
     border-radius: 8px;
     font-size: 13px;
     font-weight: 700;
@@ -269,26 +280,43 @@ const { title, description, noindex = false } = Astro.props;
     text-decoration: none;
     white-space: nowrap;
     box-shadow: 0 4px 12px rgba(63, 127, 245, 0.18);
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
 
   .os-nav-cta:hover {
     color: #ffffff !important;
-    background: #326BE0;
+    background: #326be0;
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(63, 127, 245, 0.25);
   }
 
   @media (max-width: 900px) {
-    .os-nav-links { gap: 20px; }
-    .os-nav-links a { font-size: 13px; }
-    .os-logo-img { width: 135px; }
+    .os-nav-links {
+      gap: 20px;
+    }
+    .os-nav-links a {
+      font-size: 13px;
+    }
+    .os-logo-img {
+      width: 135px;
+    }
   }
 
   @media (max-width: 767px) {
-    .os-nav { height: 68px; gap: 12px; }
-    .os-nav-links { display: none; }
-    .os-logo-img { width: 125px; max-height: 36px; }
+    .os-nav {
+      height: 68px;
+      gap: 12px;
+    }
+    .os-nav-links {
+      display: none;
+    }
+    .os-logo-img {
+      width: 125px;
+      max-height: 36px;
+    }
     .os-nav-cta {
       min-height: 39px;
       padding: 0 14px;
@@ -298,7 +326,9 @@ const { title, description, noindex = false } = Astro.props;
   }
 
   @media (max-width: 380px) {
-    .os-logo-img { width: 112px; }
+    .os-logo-img {
+      width: 112px;
+    }
     .os-nav-cta {
       min-height: 37px;
       padding: 0 11px;
@@ -311,7 +341,7 @@ const { title, description, noindex = false } = Astro.props;
   ========================================= */
   .os-landing-footer {
     padding: 60px 0 40px;
-    background: #FAFBFC;
+    background: #fafbfc;
     border-top: 1px solid var(--os-border);
   }
 

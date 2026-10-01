@@ -1,0 +1,94 @@
+---
+// BrandedPortalOfferSection — standalone callout for the limited-time
+// branded client portal offer. Moved out of FacebookAdsHero so it reads as
+// its own section instead of living inside the hero's content column.
+// Keeps the `branding-offer` id: the announcement bar's "Claim offer" link
+// scrolls here.
+---
+
+<section class="os-offer-section" id="branding-offer">
+  <div class="os-offer-section-container">
+    <div class="os-limited-offer">
+      <div class="os-offer-top">
+        <div class="os-offer-badge">LIMITED OFFER</div>
+        <div class="os-offer-count">ONLY <strong>10</strong> SPOTS</div>
+      </div>
+      <div class="os-offer-content">
+        <div class="os-offer-icon">✦</div>
+        <div class="os-offer-text">
+          <h3>Get Your Branded Client Portal</h3>
+          <p>
+            Available for the <strong>first 10 registered clients only.</strong>
+            Get your branded portal for
+            <strong>$25</strong>
+            <del>$38</del>
+            and save $13.
+          </p>
+        </div>
+      </div>
+      <a href="https://app.onesuite.io" class="os-offer-button">
+        Claim My $25 Branded Portal
+        <span>→</span>
+      </a>
+      <div class="os-offer-note">
+        First 10 registered clients only · While spots last
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .os-offer-section {
+    padding: 10px 20px 70px;
+    background: #ffffff;
+  }
+
+  .os-offer-section-container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* LIMITED OFFER CARD */
+  .os-limited-offer {
+    width: 100%;
+    max-width: 510px;
+    padding: 15px;
+    border: 1px solid #D7E5FC; border-radius: 12px;
+    background: linear-gradient(135deg, #F7FAFF, #FFFFFF);
+    box-shadow: 0 7px 20px rgba(63,127,245,.07);
+  }
+  .os-offer-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 11px; }
+  .os-offer-badge { padding: 4px 8px; border-radius: 5px; color: #ffffff; background: #3F7FF5; font-size: 8px; font-weight: 800; letter-spacing: .07em; }
+  .os-offer-count { color: #667085; font-size: 9px; font-weight: 700; }
+  .os-offer-count strong { color: #3F7FF5; }
+  .os-offer-content { display: flex; align-items: center; gap: 11px; }
+  .os-offer-icon {
+    width: 38px; height: 38px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    border-radius: 9px; color: white;
+    background: linear-gradient(135deg, #65A7FF, #315FE7);
+    font-size: 16px;
+  }
+  .os-offer-text h3 { margin: 0; color: #101828; font-size: 13px; font-weight: 750; }
+  .os-offer-text p { margin: 3px 0 0; color: #667085; font-size: 10px; line-height: 1.5; }
+  .os-offer-text p strong { color: #101828; }
+  .os-offer-text p del { color: #98A2B3; margin-left: 2px; }
+  .os-offer-button {
+    min-height: 40px;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    margin-top: 12px; border-radius: 7px;
+    color: #3F7FF5; background: #EAF2FF;
+    font-size: 11px; font-weight: 750;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+  .os-offer-button:hover { color: #ffffff; background: #3F7FF5; }
+  .os-offer-note { margin-top: 7px; color: #98A2B3; text-align: center; font-size: 8px; }
+
+  @media (max-width: 700px) {
+    .os-offer-section { padding: 5px 20px 45px; }
+    .os-offer-top { align-items: flex-start; flex-direction: column; gap: 6px; }
+  }
+</style>
